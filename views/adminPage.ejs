@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+
+    <title>Alumni Forum | Admin Page</title>
+  </head>
+  <body>
+    <%-include('partials/navbar')%>
+    <div class="dashboard">
+      <div class="dashboardHeader">
+        <h1>Welcome to Admin Page</h1>
+      </div>
+      <div class="dashboardContent">
+        <div class="dashboardSidebar">
+          <div class="sidebarContent">
+            <div class="sidebarItem active" onclick="func('database')">
+              Database Management
+            </div>
+            <div class="sidebarItem" onclick="func('forum')">
+              Forum Mangement
+            </div>
+            <div class="sidebarItem" onclick="func('notification')">
+              Notice Management
+            </div>
+          </div>
+        </div>
+        <div class="dashboardRightPanel">
+          <div class="rightContent" id="forum">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+            atque sequi impedit dicta recusandae consequatur modi nostrum
+            repellendus? Error quo soluta, fugit perspiciatis corrupti iusto
+            veniam tempora delectus omnis suscipit. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quasi error quas ipsam ea hic modi
+            voluptates fugiat, amet consectetur consequuntur quam consequatur
+            sed possimus aspernatur quibusdam rem sapiente impedit provident?
+            <br />
+          </div>
+          <div class="rightContent hidden" id="database">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            earum molestias quam natus voluptatem alias nam rem accusantium
+            explicabo et cupiditate maiores quisquam, quo, ipsum dignissimos
+            atque rerum provident nobis. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Voluptas accusamus explicabo aut alias! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            beatae voluptatum laborum sunt, quisquam error.<br />
+          </div>
+          <div class="rightContent hidden" id="notification">
+            <form
+              action="/updateNotice"
+              onsubmit="return false;"
+              class="noticeForm"
+            >
+              <div class="noticeLabel">Type Notice Text Here to Add:</div>
+              <div class="noticeTextSection">
+                <input type="text" class="noticeTextBox" />
+                <div class="noticeSubmitBtn">Submit</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div><button type="submit" id="logOut">Log-Out</button><br /></div>
+    </div>
+    <%-include('partials/footer')%>
+    <script src="js/axios.min.js"></script>
+    <script src="/js/adminPage.js"></script>
+  </body>
+</html>

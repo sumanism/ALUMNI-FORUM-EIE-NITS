@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/admin.css">
+
+    <title>Alumni Forum | Admin Page</title>
+</head>
+<body>
+    <%-include('partials/navbar')%>
+    <div class="dashboard">
+        <div class="dashboardHeader">
+            <h1>Welcome to Admin Page</h1> 
+        </div>
+        <div class="dashboardContent">
+            <div class="dashboardSidebar">
+                <div class="sidebarContent">
+                    <div class="sidebarItem">
+                        Forum Mangement
+                    </div>
+                    <div class="sidebarItem">
+                        Alumni Data Management
+                    </div>
+                    <div class="sidebarItem">
+                        Notice Management
+                    </div>
+                </div>
+            </div>
+    
+            <div class="dashboardRightPanel" >
+                <input type="text" placeholder="Enter Batch" class="batchField">
+                <input id="databaseCSV" name="databaseCSV" type="file" accept=".csv">
+            </div>
+        </div>
+    </div>
+    <%-include('partials/footer')%>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/csvToJson.js"></script>
+    <script src="/js/updateDatabase.js"></script>
+</body>
+</html>

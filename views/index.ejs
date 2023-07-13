@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni Forum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/nit-logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+</head>
+
+<body>
+    <%-include('partials/navbar')%>
+    <div class="img-gallary">
+        <div class="gallary-left">
+            <div class="owl-carousel owl-theme">
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+                <div class="image">
+                    <img src="./images/batchOf2022.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="gallary-right">
+            <div class="about-dept">About The Department</div>
+            <br>
+            <div class="dept-para">
+                The department was established in the year 2008 and currently offers a
+                four year B.Tech programme in Electronics & Instrumentation
+                Engineering, and PhD in related research topics. The department admits
+                around 60 students to B.Tech. through Central Seat Allocation Board
+                (CSAB) based on the All India Rank obtained through class 12/other
+                Qualifying Examination and Joint Entrance Examination, JEE (Main).
+                Admissions for Foreign Nationals / Persons of Indian Origin (PIOs) /
+                Non-Resident Indians (NRIs) are through Direct Admission of Students
+                Abroad (DASA) Scheme. The department selects its PhD scholars through
+                written test and/or interview usually twice a year.
+            </div>
+            <div class="about-dept">Vision</div>
+            <br>
+            <div class="dept-para">
+                To evolve into a centre of academic and research excellence,
+                developing professionals in the field of electronics and
+                instrumentation to excel in academia and industry.
+            </div>
+        </div>
+    </div>
+    <div class="notices">
+        <div class="notice-heading">Notices</div>
+        <div class="line"></div>
+        <div class="notice-list">
+            <ul class="ul-notice">
+                <%for (var i=0;i<noticeData.length;i++){%>
+                    <li class="list-item">
+                        <%=noticeData[i].noticeHead%> <img src="./images/tnew.gif" />
+                    </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <%-include('partials/footer')%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var $owl = $(".owl-carousel");
+
+        $owl.children().each(function (index) {
+            $(this).attr("data-position", index);
+        });
+
+        $owl.owlCarousel({
+            center: true,
+            items: 1,
+            loop: true,
+            dots: true,
+            margin: 500,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 750,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+            },
+        });
+
+        $(document).on("click", ".owl-item>div", function () {
+            var $speed = 300;
+            $owl.trigger("to.owl.carousel", [$(this).data("position"), $speed]);
+        });
+    </script>
+</body>
+
+</html>
