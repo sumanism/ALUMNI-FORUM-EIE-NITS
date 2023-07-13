@@ -1,0 +1,68 @@
+.batchHead{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 2% 0;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.alumniSection{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2% 5%;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 15%;
+    box-shadow: 0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+    margin: 0 2%;
+    min-height: 15rem;
+}
+.image-sec{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card-img{
+    position: relative;
+    width: 40%;
+    border-radius: 50%;
+}
+.info-sec{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.info-sec .name{
+    font-size: 1.2rem;
+}
+.linkedin{
+    border: 1px solid black;
+    padding: 0.5% 3%;
+    border-radius: 7px;
+    font-size: 1.3rem;
+    transition: all 0.1s ease-in-out;
+}
+.fa-linkedin-in{
+    color: black;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+.linkedin:hover{
+    background-color: black;
+}
+.linkedin:hover .fa-linkedin-in{
+    color: white;
+}

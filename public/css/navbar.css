@@ -1,0 +1,118 @@
+.nav-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    float: left;
+    font-family: "Open Sans", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.left-section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 5%;
+    width: 12%;
+}
+.nits-logo{
+    position: relative;
+    width: 40%;
+}
+.heading{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    color: #dd4800;
+    font-size: 200%;
+    text-decoration: none;
+    margin: 25px;
+}
+.upper-heading{
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    color: #dd4800;
+    text-decoration: none;
+    margin: 7px;
+}
+.lower-heading{
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #3450a7;
+    margin: 7px;
+}
+.right-section{
+    position: relative;
+    display: flex;
+    width: 100%;
+    color:#F1FAEE;
+    background-color: black;
+    height: 50px;
+    justify-content:center;
+    align-items: center;
+}
+.buttons{
+    position: relative;
+    display: flex;
+    font-size: 1.1rem;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;  
+    transition: all 0.2s ease-in-out;
+}
+.buttons:hover{
+    background-color: #2D3047;
+}
+.link{
+    position: relative;
+    text-decoration: none;
+    color:#F1FAEE;
+    width: 30%;
+    height: 100%;
+    top: 35%;
+}
+.buttons:hover > .link{
+    color: white;
+}
+.buttons .dropdown{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    background: #2D3047;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    padding: 0;
+}
+.buttons:hover ul.dropdown{
+    display: block;
+}
+.buttons ul.dropdown li{
+    width: 100%;
+    display: block;
+}
+.buttons ul.dropdown li a{
+    color: white;
+    text-decoration: none;
+}
+.buttons ul.dropdown li:hover{
+    background-color: #F1FAEE;
+}
+.buttons ul.dropdown li:hover a{
+    color: black;
+}
